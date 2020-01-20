@@ -14,22 +14,14 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    # Loop through array
-    swap = False
-    for i in range(1, len(arr)):
-        if arr[i] < arr[i - 1]:
-            temp = arr[i - 1]
-            arr[i - 1] = arr[i]
-            arr[i] = temp
-            swap = True
-        # Compare each element to its neighbor
-        # If element's in wrong position relative to each other, swap them
-    # if no swaps performed, stop
-    if swap == False:
-        return arr
-    else:
-        bubble_sort(arr)
-    # else, go back to element at index 0 and repeat step 1
+    while True:
+        swap = False
+        for i in range(1, len(arr)):
+            if arr[i] < arr[i - 1]:
+                arr[i], arr[i - 1] = arr[i - 1], arr[i]
+                swap = True
+        if swap == False:
+            break
     return arr
 
 
