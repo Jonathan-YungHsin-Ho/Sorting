@@ -15,14 +15,13 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    while True:
+    swap = True
+    while swap:
         swap = False
         for i in range(1, len(arr)):
             if arr[i] < arr[i - 1]:
                 arr[i], arr[i - 1] = arr[i - 1], arr[i]
                 swap = True
-        if swap == False:
-            break
     return arr
 
 
