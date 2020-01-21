@@ -20,6 +20,7 @@ def merge(arrA, arrB):
             merged_arr[i] = arrB[index_B]
             index_B += 1
         i += 1
+        print('A', index_A, 'B', index_B, 'index', i)
     return merged_arr
 
 
