@@ -4,7 +4,7 @@ def merge(arrA, arrB):
     merged_arr = [0] * elements
     # TO-DO
     index_merged = index_A = index_B = 0
-    while index_merged < elements:
+    for index_merged in range(0, elements):
         if index_A == len(arrA):
             merged_arr[index_merged:] = arrB[index_B:]
             break
@@ -17,7 +17,6 @@ def merge(arrA, arrB):
         elif arrB[index_B] <= arrA[index_A]:
             merged_arr[index_merged] = arrB[index_B]
             index_B += 1
-        index_merged += 1
     return merged_arr
 
 
@@ -26,9 +25,7 @@ def merge(arrA, arrB):
 
 def merge_sort(arr):
     # TO-DO
-    if len(arr) <= 1:
-        return arr
-    else:
+    if len(arr) > 1:
         middle = len(arr) // 2
         left_arr = arr[:middle]
         right_arr = arr[middle:]
