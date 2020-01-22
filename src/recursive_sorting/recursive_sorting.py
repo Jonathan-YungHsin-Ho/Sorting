@@ -11,10 +11,10 @@ def merge(arrA, arrB):
         elif index_B == len(arrB):
             merged_arr[index_merged:] = arrA[index_A:]
             break
-        elif arrA[index_A] < arrB[index_B]:
+        elif arrA[index_A] <= arrB[index_B]:
             merged_arr[index_merged] = arrA[index_A]
             index_A += 1
-        elif arrB[index_B] < arrA[index_A]:
+        elif arrB[index_B] <= arrA[index_A]:
             merged_arr[index_merged] = arrB[index_B]
             index_B += 1
         index_merged += 1
