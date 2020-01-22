@@ -4,7 +4,7 @@ def merge(arrA, arrB):
     merged_arr = [0] * elements
     # TO-DO
     index_merged = index_A = index_B = 0
-    for index_merged in range(0, elements):
+    for index_merged in range(elements):
         if index_A == len(arrA):
             merged_arr[index_merged:] = arrB[index_B:]
             break
